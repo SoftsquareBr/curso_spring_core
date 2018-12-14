@@ -1,0 +1,18 @@
+<!-- Spring-Common.xml -->
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="customerBean" class="br.com.softsquare.customer.Customer">
+
+
+    <property name="name" value="Sergio"></property>
+	<property name="address" value="rua de tal"></property>	
+	<property name="age" value="32"></property>
+	
+	
+	</bean>
+
+</beans>

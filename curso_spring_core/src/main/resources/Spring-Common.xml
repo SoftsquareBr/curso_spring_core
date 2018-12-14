@@ -1,0 +1,30 @@
+<!-- Spring-Common.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="OutputHelper" class="br.com.softsquare.output.OutputHelper">
+
+
+		
+			<property name="outputGenerator">
+			<ref bean="CsvOutputGenerator" />
+		    </property>
+		    
+		    
+		    
+		<!--
+		<property name="outputGenerator" ref="JsonOutputGenerator" 
+			/> -->
+			
+        <constructor-arg> 
+		<bean class="br.com.softsquare.output.imp.JsonOutputGenerator" /> 
+		</constructor-arg> 
+	
+	</bean>
+
+	<bean id="CsvOutputGenerator" class="br.com.softsquare.output.imp.CsvOutputGenerator" />
+	<bean id="JsonOutputGenerator" class="br.com.softsquare.output.imp.JsonOutputGenerator" />
+
+</beans>
